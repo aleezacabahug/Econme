@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #74d0a2;
 }
 
 header {
-    background: #35424a;
+    background: #9cacdb;
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
@@ -23,7 +23,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #e8491d;
+    background: #9cacdb;
 }
 
 main {
@@ -31,7 +31,7 @@ main {
 }
 
 footer {
-    background: #35424a;
+    background: #9cacdb;
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
@@ -41,7 +41,7 @@ footer {
 }
 
 form {
-    background: #ffffff;
+    background: #418074;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -68,7 +68,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background: #e8491d;
+    background: #291978;
 }
 
 .note {
@@ -80,7 +80,7 @@ form input[type="submit"]:hover {
 }
 
 .note button {
-    background: #e8491d;
+    background: #6b227e;
     color: #ffffff;
     border: none;
     padding: 5px 10px;
@@ -90,4 +90,25 @@ form input[type="submit"]:hover {
 
 .note button:hover {
     background: #35424a;
+}
+
+.page-links {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.page-link {
+    background: #ffffff;
+    color: #418074;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.page-link:hover {
+    background: #9cacdb;
+    color: #ffffff;
 }
