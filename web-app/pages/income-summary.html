@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Summary</title>
+    <link rel="stylesheet" href="../styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="../components/header.html"></div>
+    </header>
+    <nav>
+        <div data-include="../components/nav.html"></div>
+    </nav>
+    <main>
+        <h1>Income Summary</h1>
+        <section id="summary">
+            <h2>Your Financial Overview</h2>
+            <p>Total Income: $<span id="total-income">0</span></p>
+            <p>Total Expenses: $<span id="total-expenses">0</span></p>
+            <p>Net Income: $<span id="net-income">0</span></p>
+        </section>
+        <section id="details">
+            <h2>Income and Expense Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="details-body">
+                    <!-- Income and expense entries will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div data-include="../components/footer.html"></div>
+    </footer>
+    <script src="../scripts/income-summary.js"></script>
+</body>
+</html>

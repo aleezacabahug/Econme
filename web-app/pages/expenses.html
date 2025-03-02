@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Expenses</title>
+    <link rel="stylesheet" href="../styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="../components/header.html"></div>
+    </header>
+    <nav>
+        <div data-include="../components/nav.html"></div>
+    </nav>
+    <main>
+        <h1>Manage Your Expenses</h1>
+        <form id="expense-form">
+            <label for="expense-name">Expense Name:</label>
+            <input type="text" id="expense-name" required>
+            <label for="expense-amount">Amount:</label>
+            <input type="number" id="expense-amount" required>
+            <button type="submit">Add Expense</button>
+        </form>
+        <h2>Expense List</h2>
+        <ul id="expense-list">
+            <!-- Expense items will be dynamically added here -->
+        </ul>
+    </main>
+    <footer>
+        <div data-include="../components/footer.html"></div>
+    </footer>
+    <script>
+        const expenseForm = document.getElementById('expense-form');
+        const expenseList = document.getElementById('expense-list');
+
+        expenseForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const expenseName = document.getElementById('expense-name').value;
+            const expenseAmount = document.getElementById('expense-amount').value;
+
+            const listItem = document.createElement('li');
+            listItem.textContent = `${expenseName}: $${expenseAmount}`;
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.onclick = function() {
+                expenseList.removeChild(listItem);
+            };
+            listItem.appendChild(deleteButton);
+            expenseList.appendChild(listItem);
+
+            expenseForm.reset();
+        });
+    </script>
+</body>
+</html>
