@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="../styles/notes.css">
+</head>
+<body>
+    <header>
+        <div data-include="../components/header.html"></div>
+    </header>
+    <nav>
+        <div data-include="../components/nav.html"></div>
+    </nav>
+    <main>
+        <h1>Notes</h1>
+        <form id="note-form">
+            <textarea id="note-input" placeholder="Write your note here..." required></textarea>
+            <button type="submit">Add Note</button>
+        </form>
+        <section id="notes-list">
+            <h2>Your Notes</h2>
+            <ul id="notes"></ul>
+        </section>
+    </main>
+    <footer>
+        <div data-include="../components/footer.html"></div>
+    </footer>
+    <script src="../scripts/notes.js"></script>
+</body>
+</html>
